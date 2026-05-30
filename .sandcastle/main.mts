@@ -93,24 +93,25 @@ for (let iteration = 1; iteration <= MAX_ITERATIONS; iteration++) {
     console.log(`\nImplementation complete on branch: ${branch}`);
     console.log(`Commits: ${implement.commits.length}`);
 
-    // -----------------------------------------------------------------------
-    // Phase 2: Review
-    //
-    // A second sonnet agent reviews the diff of the branch produced by
-    // Phase 1. It uses the {{BRANCH}} prompt argument to inspect the right
-    // branch, and either approves or makes corrections directly on the branch.
-    // -----------------------------------------------------------------------
-    await sandbox.run({
-      name: "reviewer",
-      maxIterations: 1,
-      agent: sandcastle.copilot("claude-sonnet-4.5"),
-      promptFile: "./.sandcastle/review-prompt.md",
-      promptArgs: {
-        BRANCH: branch,
-      },
-    });
+    // Turning of review phase for now, as it was failing due to long filenames in the diff. Will re-enable in a future iteration.
+    // // -----------------------------------------------------------------------
+    // // Phase 2: Review
+    // //
+    // // A second sonnet agent reviews the diff of the branch produced by
+    // // Phase 1. It uses the {{BRANCH}} prompt argument to inspect the right
+    // // branch, and either approves or makes corrections directly on the branch.
+    // // -----------------------------------------------------------------------
+    // await sandbox.run({
+    //   name: "reviewer",
+    //   maxIterations: 1,
+    //   agent: sandcastle.copilot("claude-sonnet-4.5"),
+    //   promptFile: "./.sandcastle/review-prompt.md",
+    //   promptArgs: {
+    //     BRANCH: branch,
+    //   },
+    // });
 
-    console.log("\nReview complete.");
+    // console.log("\nReview complete.");
   } finally {
     await sandbox.close();
   }
