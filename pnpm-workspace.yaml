@@ -1,0 +1,5 @@
+allowBuilds:
+  "@parcel/watcher": true
+  msgpackr-extract: true
+minimumReleaseAgeExclude:
+  - '@ai-hero/sandcastle@0.6.6'
