@@ -2,10 +2,11 @@
   "scripts": {
     "sandcastle": "npx tsx .sandcastle/main.mts",
     "prepare": "husky",
+    "typecheck": "echo \"No type checking yet\" && exit 0",
     "test": "echo \"No tests yet\" && exit 0"
   },
   "devDependencies": {
-    "@ai-hero/sandcastle": "^0.6.6",
+    "@ai-hero/sandcastle": "^0.8.0",
     "@commitlint/cli": "^21.0.2",
     "@commitlint/config-conventional": "^21.0.2",
     "husky": "^9.1.7"
