@@ -1,4 +1,5 @@
 {
+  "name": "slob-three",
   "scripts": {
     "sandcastle": "npx tsx .sandcastle/main.mts",
     "prepare": "husky",

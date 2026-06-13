@@ -17,6 +17,7 @@ This project follows **Conventional Commits** to maintain a clean, readable hist
 ### Type
 
 Required. **Must be lowercase**. One of:
+
 - **feat** – A new feature
 - **fix** – A bug fix
 - **test** – Add or update tests
@@ -33,14 +34,14 @@ Optional. Encapsulates the area of the codebase affected, e.g. `(ui)`, `(storage
 
 ### Subject
 
-- Capitalize first letter of subject (after the colon, leave the type and scope lowercase)
+- **Must capitalize first letter of subject** (after the colon, leave the type and scope lowercase)
 - Imperative mood ("Add feature" not "Added feature")
 - No period at the end
 - Keep to 50 characters or fewer
 
 ### Body
 
-Optional. Provide context and explain *why* the change was made, not what (the diff shows that).
+Optional. Provide context and explain _why_ the change was made, not what (the diff shows that).
 
 ### Footer
 
@@ -63,6 +64,7 @@ Closes #42
 This project uses **commitlint** to enforce Conventional Commits. Commit messages that don't conform will be rejected at commit time.
 
 To bypass (not recommended):
+
 ```bash
 git commit --no-verify
 ```
